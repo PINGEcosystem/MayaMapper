@@ -14,7 +14,7 @@ dependencies:
   - h5py
   - pip
   - pip:
-      - mayamapper
+      # - mayamapper
       - pingseg
       - pingtile
       - doodleverse_utils
