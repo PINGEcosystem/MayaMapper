@@ -1,6 +1,8 @@
 name: mayamapper
 channels:
   - conda-forge
+variables:
+  KMP_DUPLICATE_LIB_OK: "TRUE"
 dependencies:
   - python=3.12
   - gdal=3.9
@@ -15,13 +17,15 @@ dependencies:
   - h5py
   - pip
   - pip:
+      - --index-url https://download.pytorch.org/whl/cpu
+      - --extra-index-url https://pypi.org/simple
       # - mayamapper
       - pingseg
       - pingtile
       - doodleverse_utils
       - psutil
-      - tensorflow
-      - tf-keras
+      # - tensorflow
+      # - tf-keras
       # - transformers==4.46.3
       - transformers<5
       - torch
